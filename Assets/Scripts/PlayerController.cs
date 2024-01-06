@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed;
     public Animator animator;
+    public CapsuleCollider2D capsuleCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,12 @@ public class PlayerController : MonoBehaviour
         
         animator.SetFloat("xInput",Mathf.Abs(xInput));
 
+        float yInput = Input.GetAxis("Vertical");
+
+        animator.SetFloat("yInput", Mathf.Abs(yInput));
+
+       
+
         Vector3 scale = transform.localScale;
         if(xInput<0)
         {
@@ -30,8 +37,29 @@ public class PlayerController : MonoBehaviour
         {
             scale.x = Mathf.Abs(scale.x);
         }
+
+        
+
         transform.localScale = scale;
         transform.Translate(xInput*speed*Time.deltaTime, 0, 0);
 
+        if(Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            capsuleCollider.size = new Vector2(capsuleCollider.size.x, 1.1f);
+            capsuleCollider.offset = new Vector2(capsuleCollider.offset.x, 0.6f);
+            animator.SetTrigger("CrouchTrigger");
+      
+            
+        }
+        if(Input.GetKeyUp(KeyCode.LeftControl)) {
+
+            capsuleCollider.size = new Vector2(capsuleCollider.size.x, 2.2f);
+            capsuleCollider.offset = new Vector2(capsuleCollider.offset.x, 1f);
+
+
+        }
+
     }
+
+
 }
