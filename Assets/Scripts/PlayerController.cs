@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private float jumpForce;
     public Animator animator;
     public CapsuleCollider2D capsuleCollider;
+    public Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
         float yInput = Input.GetAxis("Vertical");
 
-        animator.SetFloat("yInput", Mathf.Abs(yInput));
+        animator.SetFloat("yInput", yInput);
 
        
 
@@ -37,7 +39,10 @@ public class PlayerController : MonoBehaviour
         {
             scale.x = Mathf.Abs(scale.x);
         }
-
+        if (yInput > 0)
+        {
+            rb.AddForce(Vector2.up * jumpForce);
+        }
         
 
         transform.localScale = scale;

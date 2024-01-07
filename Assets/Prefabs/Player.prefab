@@ -122,8 +122,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  jumpForce: 5
   animator: {fileID: 173792812133815478}
   capsuleCollider: {fileID: 5915784668438933198}
+  rb: {fileID: 5870272729025655433}
 --- !u!50 &5870272729025655433
 Rigidbody2D:
   serializedVersion: 4
@@ -139,7 +141,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
