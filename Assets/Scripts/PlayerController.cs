@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public CapsuleCollider2D capsuleCollider;
     public Rigidbody2D rb;
+
+    public ScoreController scoreController;
 
     // Start is called before the first frame update
     void Start()
@@ -66,5 +69,9 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void PickUpKey()
+    {
 
+        scoreController.IncreaseScore(10);
+    }
 }
