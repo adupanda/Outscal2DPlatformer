@@ -214,11 +214,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a815e630fe27ad4193503498b16f03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 7.12
   jumpForce: 5
   animator: {fileID: 173792812133815478}
   capsuleCollider: {fileID: 5915784668438933198}
   rb: {fileID: 5870272729025655433}
+  scoreController: {fileID: 0}
 --- !u!50 &5870272729025655433
 Rigidbody2D:
   serializedVersion: 4
