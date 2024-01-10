@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -73,5 +75,17 @@ public class PlayerController : MonoBehaviour
     {
 
         scoreController.IncreaseScore(10);
+    }
+
+    public void KillPlayer()
+    {
+
+        ReloadLevel();
+        
+    }
+
+    private void ReloadLevel()
+    {
+        SceneManager.LoadScene(0);
     }
 }
