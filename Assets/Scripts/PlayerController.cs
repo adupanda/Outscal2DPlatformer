@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+
+    
+    public GameOverController gameOverController;
+
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     public Animator animator;
@@ -83,16 +87,15 @@ public class PlayerController : MonoBehaviour
 
         if (health == 0)
         {
-            ReloadLevel();
+            gameOverController.PlayerDied();
+            this.enabled = false;
         }
+        
         
         
        
         
     }
 
-    private void ReloadLevel()
-    {
-        SceneManager.LoadScene(0);
-    }
+    
 }
