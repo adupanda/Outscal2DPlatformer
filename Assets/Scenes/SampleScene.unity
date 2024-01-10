@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 408753332}
   - component: {fileID: 408753331}
   - component: {fileID: 408753333}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,10 +263,10 @@ BoxCollider2D:
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 183
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 183
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1367,15 +1367,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3073745314923720232, guid: 512fde2c79d6d6641917d3836834a6aa,
+    - target: {fileID: 1771121125448450629, guid: 512fde2c79d6d6641917d3836834a6aa,
         type: 3}
-      propertyPath: scoreController
-      value: 
-      objectReference: {fileID: 670943697}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3351343487819719335, guid: 512fde2c79d6d6641917d3836834a6aa,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351343487819719335, guid: 512fde2c79d6d6641917d3836834a6aa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9070599888601687014, guid: 512fde2c79d6d6641917d3836834a6aa,
         type: 3}
