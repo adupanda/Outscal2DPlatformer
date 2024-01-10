@@ -39,7 +39,7 @@ public class EnemyController : MonoBehaviour
         if(currentPoint == pointB.transform)
         {
             rb.velocity = new Vector2(speed, 0);
-            Debug.Log("going to pointB");
+            
 
         }
         else

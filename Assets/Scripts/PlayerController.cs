@@ -12,13 +12,13 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public CapsuleCollider2D capsuleCollider;
     public Rigidbody2D rb;
-
+    public int health = 3;
     public ScoreController scoreController;
-
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -79,8 +79,15 @@ public class PlayerController : MonoBehaviour
 
     public void KillPlayer()
     {
+        health -= 1;
 
-        ReloadLevel();
+        if (health == 0)
+        {
+            ReloadLevel();
+        }
+        
+        
+       
         
     }
 
