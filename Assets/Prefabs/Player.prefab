@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3292634837954017570}
   - component: {fileID: 1853093251072041639}
   - component: {fileID: 5084310700720894590}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 3073745314923720232}
   - component: {fileID: 5870272729025655433}
   - component: {fileID: 5915784668438933198}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,6 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a815e630fe27ad4193503498b16f03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverController: {fileID: 0}
   speed: 7.12
   jumpForce: 5
   animator: {fileID: 173792812133815478}
