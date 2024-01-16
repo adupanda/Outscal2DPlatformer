@@ -81,20 +81,24 @@ public class PlayerController : MonoBehaviour
         scoreController.IncreaseScore(10);
     }
 
-    public void KillPlayer()
+    public void DecreaseHealth()
     {
         health -= 1;
 
-        if (health == 0)
+        if (health <= 0)
         {
-            gameOverController.PlayerDied();
-            this.enabled = false;
+            KillPlayer();
         }
-        
-        
-        
-       
-        
+    }
+    public void KillPlayer()
+    {
+
+        gameOverController.PlayerDied();
+        this.enabled = false;
+
+
+
+
     }
 
     

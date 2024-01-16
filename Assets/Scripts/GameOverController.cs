@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameOverController : MonoBehaviour
 {
     public Button restartButton;
+    
 
 
     private void Awake()
@@ -21,6 +22,7 @@ public class GameOverController : MonoBehaviour
     private void ReloadLevel()
     {
         SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }

@@ -20,7 +20,7 @@ public class EnemyController : MonoBehaviour
         {
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
 
-            playerController.KillPlayer();
+            playerController.DecreaseHealth();
         }
     }
 
