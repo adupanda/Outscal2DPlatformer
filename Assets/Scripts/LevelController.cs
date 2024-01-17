@@ -9,7 +9,11 @@ public class LevelController : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<PlayerController>() != null)
         {
-            SceneManager.LoadScene("Level2");
+            Debug.Log("Level Over!");
+            
+            LevelManager.Instance.MarkLevelComplete();
+
+            SceneManager.LoadScene(0);
         }
 
     }
