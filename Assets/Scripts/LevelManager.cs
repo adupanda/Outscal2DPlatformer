@@ -26,9 +26,17 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        foreach(var level in Levels)
+        {
+            SetLevelStatus(level, LevelStatus.Locked);
+        }
         if (GetLevelStatus(Levels[0]) == LevelStatus.Locked)
         {
             SetLevelStatus(Levels[0], LevelStatus.Unlocked);
+        }
+        if(GetLevelStatus("Lobby") == LevelStatus.Locked)
+        {
+            SetLevelStatus("Lobby", LevelStatus.Unlocked);
         }
     }
 

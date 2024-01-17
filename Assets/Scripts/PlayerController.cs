@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
     {
 
         gameOverController.PlayerDied();
-        this.enabled = false;
+        
 
 
 
