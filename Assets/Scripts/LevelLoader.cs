@@ -11,6 +11,7 @@ public class LevelLoader : MonoBehaviour
     private Button button;
     public string LevelName;
 
+    
    
     private void Awake()
     {
@@ -25,18 +26,27 @@ public class LevelLoader : MonoBehaviour
 
     private void onClick()
     {
-        if(Camera.main != null) {
-            Camera.main.enabled = false;
-            
-        }
-        if(GetComponentInParent<Canvas>() != null)
+        LevelStatus levelStatus = LevelManager.Instance.GetLevelStatus(LevelName);
+        switch (levelStatus)
         {
-            GetComponentInParent<Canvas>().enabled = false;
+            case LevelStatus.Locked:
+                Debug.Log("Not Unlocked");
+                break;
+
+            case LevelStatus.Unlocked:
+                SceneManager.LoadSceneAsync(LevelName);
+                break;
+
+            case LevelStatus.Completed:
+                SceneManager.LoadSceneAsync(LevelName);
+                break;
+        
         }
+
+
+
+
         
-        
-        
-        SceneManager.LoadSceneAsync(LevelName);
         
         
         
