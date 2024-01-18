@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce);
         }
         
+        
 
         transform.localScale = scale;
         transform.Translate(xInput*speed*Time.deltaTime, 0, 0);

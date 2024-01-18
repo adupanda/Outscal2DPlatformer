@@ -34,13 +34,20 @@ public class LevelLoader : MonoBehaviour
                 break;
 
             case LevelStatus.Unlocked:
+                SoundManager.Instance.Play(Sounds.ButtonClick);
                 SceneManager.LoadSceneAsync(LevelName);
                 break;
 
             case LevelStatus.Completed:
+                SoundManager.Instance.Play(Sounds.ButtonClick);
                 SceneManager.LoadSceneAsync(LevelName);
                 break;
         
+        }
+
+        if(LevelName == "Lobby")
+        {
+            SoundManager.Instance.PlayMusic(Sounds.Music);
         }
 
 
