@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &185052309323497629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 767521790716579340}
+  m_Layer: 6
+  m_Name: groundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &767521790716579340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185052309323497629}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9070599888601687014}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1771121125448450629
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,6 +149,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3292634837954017570}
+  - {fileID: 767521790716579340}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6888873347317360001
@@ -207,12 +239,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverController: {fileID: 0}
   speed: 7.12
-  jumpForce: 5
+  jumpForce: 7.5
   animator: {fileID: 173792812133815478}
   capsuleCollider: {fileID: 5915784668438933198}
   rb: {fileID: 5870272729025655433}
   health: 3
   scoreController: {fileID: 0}
+  groundCheck: {fileID: 767521790716579340}
+  groundCheckRadius: 0.4
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!50 &5870272729025655433
 Rigidbody2D:
   serializedVersion: 4
@@ -259,10 +296,10 @@ CapsuleCollider2D:
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 375
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 375
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295
